@@ -53,6 +53,6 @@ if start_button:
     mean = toss_coin(number_of_trials)
     st.session_state['df_experiment_results'] = pd.concat([st.session_state['df_experiment_results'],pd.DataFrame(data=[[st.session_state['experiment_no'],number_of_trials,mean]],columns=['no', 'iteraciones', 'media'])],axis=0)
     
-	st.session_state['df_experiment_results'] = st.session_state['df_experiment_results'].reset_index(drop=True)
+    st.session_state['df_experiment_results'] = st.session_state['df_experiment_results'].reset_index(drop=True)
 
 st.write(st.session_state['df_experiment_results'])
